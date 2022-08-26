@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
 import Habits from './components/habits';
+import Header from './components/header';
 
 class App extends Component {
   state = {
@@ -29,14 +30,20 @@ class App extends Component {
     const habits = this.state.habits.filter((item) => item.id !== habit.id);
     this.setState({ habits });
   };
+
   render() {
     return (
-      <Habits
-        habits={this.state.habits}
-        onIncrement={this.handleIncrement}
-        onDecrement={this.handleDecrement}
-        onDelete={this.handleDelete}
-      ></Habits>
+      <>
+        <Header
+          totalCount={this.state.habits.filter((item) => item.count > 0).length}
+        ></Header>
+        <Habits
+          habits={this.state.habits}
+          onIncrement={this.handleIncrement}
+          onDecrement={this.handleDecrement}
+          onDelete={this.handleDelete}
+        />
+      </>
     );
   }
 }

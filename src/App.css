@@ -1,7 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
 button {
   outline: none;
   border: 0;
   cursor: pointer;
+}
+
+.header {
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.5em;
+}
+
+.header__logo {
+  width: 3rem;
+  height: 3rem;
+  color: brown;
+  background-color: white;
+  margin-right: 0.3em;
+}
+
+.header__title {
+  margin-right: 0.3em;
+}
+
+.header__count {
+  display: inline-block;
+  background-color: brown;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  line-height: 2.4rem;
+  text-align: center;
+  color: white;
 }
 
 .habit {
