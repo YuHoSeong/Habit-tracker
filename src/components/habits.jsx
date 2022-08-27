@@ -4,6 +4,7 @@ import HabitAddForm from './habitAddForm';
 
 class habits extends Component {
   render() {
+    console.log('habits');
     return (
       <>
         <HabitAddForm onAdd={this.props.onAdd} />
